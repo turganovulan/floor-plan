@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+#floor-plan {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* Widget Styles */
+
+.fp-container {
+  width: 100%;
+  height: 100%;
+}
+
+.fp-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.fp-modal {
+  width: 100%;
+  max-width: 900px;
+}
+
+.fp-modal-header {
+
+}
+
+.fp-modal-content {
+  width: 100%;
+  height: 100%;
+}
+
+.jquery-modal.blocker {
+  background-color: rgba(0,0,0,0.5);
+}
