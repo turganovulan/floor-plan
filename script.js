@@ -31,16 +31,21 @@ function openModal() {
   // Add content
   const content = $('<div>', { class: 'fp-modal-content' })
   modal.append(content)
+  const spinner = $(`<div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>`)
+  content.append(spinner)
 
-  $.get("fp.html", function (fpContent) {
+  $.get("https://turganovulan.github.io/floor-plan/app.html", function (fpContent) {
+    spinner.remove()
     content.append($(fpContent))
-    // window.initFP()
-
+    setTimeout(window.initFP)
     modal.appendTo('body').modal({
-      escapeClose: false,
+      // escapeClose: false,
       clickClose: false,
       showClose: false,
       fadeDuration: 1
     })
   })
+
 }
